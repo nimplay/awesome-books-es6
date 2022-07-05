@@ -1,6 +1,6 @@
 // create contact page
 const contactSection = document.querySelector('.contact');
-export default function contactPage() {
+const contactPage = () => {
   const contactParagraph = document.createElement('p');
   const contactParagraph2 = document.createElement('p');
   const contactUl = document.createElement('ul');
@@ -32,4 +32,6 @@ export default function contactPage() {
   contactli1.textContent = 'Our e-mail: mail@mail.com';
   contactli2.textContent = 'Our phone number: 004-358-6534-422';
   contactli3.textContent = 'Our address: Streetname 22, 84503 City, Country.';
-}
+};
+
+export default contactPage;

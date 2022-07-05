@@ -1,12 +1,16 @@
 /* eslint max-classes-per-file: ["error", 3] */
 
+import { DateTime } from './modules/luxon.js';
 import contactPage from './modules/contact.js';
 import addBookForm from './modules/addBook.js';
-import currentTime from './modules/date.js';
 
-currentTime();
 contactPage();
 addBookForm();
+
+const nowDate = DateTime.now();
+const time = nowDate.toLocaleString(DateTime.DATETIME_MED);
+const dateDiv = document.getElementById('clock');
+dateDiv.innerHTML = time;
 
 /* Declaration of sections */
 const titleDisplay = document.querySelector('.main-title');
@@ -20,11 +24,11 @@ let i = 0;
 
 // display main page
 
-function displayMainPage() {
+const displayMainPage = () => {
   titleDisplay.textContent = 'All awesome books';
   list.classList.toggle('active');
   pg1.classList.toggle('active');
-}
+};
 displayMainPage();
 
 document.querySelector('#pg1').addEventListener('click', (e) => {

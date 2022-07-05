@@ -1,6 +1,6 @@
 // create add book page
 const formSection = document.querySelector('.add-form');
-export default function addBookForm() {
+const addBookForm = () => {
   const formContainer = document.createElement('form');
   const bookTitleImput = document.createElement('input');
   const bookAuthorInput = document.createElement('input');
@@ -31,4 +31,5 @@ export default function addBookForm() {
   formContainer.appendChild(bookTitleImput);
   formContainer.appendChild(bookAuthorInput);
   formContainer.appendChild(addBtnForm);
-}
+};
+export default addBookForm;
