@@ -1,12 +1,12 @@
 /* eslint max-classes-per-file: ["error", 3] */
 
-// import contactPage from './modules/contact.js';
-// import addBookForm from './modules/addBook.js';
+import contactPage from './modules/contact.js';
+import addBookForm from './modules/addBook.js';
 import currentTime from './modules/date.js';
 
 currentTime();
-// contactPage();
-// addBookForm();
+contactPage();
+addBookForm();
 
 /* Declaration of sections */
 const titleDisplay = document.querySelector('.main-title');
